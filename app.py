@@ -6,10 +6,11 @@ import os
 import numpy as np
 
 # Load the trained model
-model_path = r"C:\Users\Tejas\OneDrive\Desktop\weather_prediction_project\models\trained_model.pkl"
+model_path = "models/trained_model.pkl"
+
 try:
     model = joblib.load(model_path)
-    st.success(f"✅ Model loaded from: {model_path}")
+    st.success(f"✔ Model loaded from: {model_path}")
 except FileNotFoundError:
     st.error(f"❌ Model file not found at: {model_path}")
     st.stop()
